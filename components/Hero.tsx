@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed"
         >
-          The offline-first AI assistant that guards your mental state while you work.
+          The offline-first <strong>Algorithm Assistant</strong> that guards your mental state while you work.
           Stress detection, posture analysis, and gesture control—all running locally.
         </motion.p>
 
@@ -54,16 +54,27 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8"
         >
-          <button className="group relative px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]">
+          {/* Download button */}
+          <a
+            href="https://github.com/teliamogh7578/ZenSpace"
+            download
+            className="group relative px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]"
+          >
             <Download className="w-5 h-5" />
             <span>Download for Windows</span>
             <div className="absolute inset-0 rounded-xl ring-2 ring-white/20 group-hover:ring-white/40 transition-all" />
-          </button>
-          
-          <button className="px-8 py-4 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white rounded-xl transition-all flex items-center gap-2">
+          </a>
+
+          {/* Source code button */}
+          <a
+            href="https://github.com/teliamogh7578/ZenSpace"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white rounded-xl transition-all flex items-center gap-2"
+          >
             <Code className="w-5 h-5" />
             <span>View Source</span>
-          </button>
+          </a>
         </motion.div>
 
         <motion.div 
@@ -72,14 +83,14 @@ const Hero: React.FC = () => {
           transition={{ delay: 1, duration: 1 }}
           className="pt-12 flex items-center justify-center gap-8 text-slate-600"
         >
-            <div className="flex items-center gap-2">
-              <Cpu className="w-4 h-4" />
-              <span className="text-sm font-mono">ON-DEVICE PROCESSING</span>
-            </div>
-            <div className="h-4 w-px bg-slate-800" />
-             <div className="flex items-center gap-2">
-              <span className="text-sm font-mono">PYTHON + MEDIAPIPE</span>
-            </div>
+          <div className="flex items-center gap-2">
+            <Cpu className="w-4 h-4" />
+            <span className="text-sm font-mono">ON-DEVICE PROCESSING</span>
+          </div>
+          <div className="h-4 w-px bg-slate-800" />
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-mono">PYTHON + MEDIAPIPE</span>
+          </div>
         </motion.div>
       </div>
     </section>
